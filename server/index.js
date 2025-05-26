@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(
   cors({
-    origin: ["https://deploy-mern-1whq.vercel.app"],
+    origin: [""],
     methods: ["POST", "GET"],
     credentials: true,
   })
