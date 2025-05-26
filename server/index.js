@@ -5,14 +5,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(express.json());
-app.use(
-  cors({
-    origin: [""],
-    methods: ["POST", "GET"],
-    credentials: true,
-  })
-);
-// app.use(cors("*"))
+app.use(cors())
 
 const containers = {
   "20ft": { maxCBM: 32.7, maxWeight: 28000 },
@@ -22,7 +15,7 @@ const containers = {
 
 // Routes
 app.get("/", (req, res) => {
-  res.json("Hello Rohit");
+  res.json("Hello Rohit Singh");
 });
 app.post("/api/calculate", (req, res) => {
   const { length, width, height, weight, quantity } = req.body;
