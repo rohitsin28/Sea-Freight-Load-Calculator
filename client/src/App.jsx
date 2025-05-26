@@ -10,7 +10,8 @@ function App() {
   const [result, setResult] = useState(null);
 
   const handleCalculate = async () => {
-    const res = await axios.post("http://localhost:5000/api/calculate", {
+    // const res = await axios.post("http://localhost:5000/api/calculate", {
+    const res = await axios.post("https://sea-freight-load-calculator-km3n.vercel.app/api/calculate", {
       length,
       width,
       height,
